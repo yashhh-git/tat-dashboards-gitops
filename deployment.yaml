@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tat-dashboard
+  namespace: dashboards
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tat-dashboard
+  template:
+    metadata:
+      labels:
+        app: tat-dashboard
+    spec:
+      containers:
+      - name: tat-dashboard
+        image: <your_dockerhub_username>/tat-dashboard:latest
+        ports:
+        - containerPort: 8501
