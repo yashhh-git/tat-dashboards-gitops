@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: tat-dashboard
-        image: <your_dockerhub_username>/tat-dashboard:latest
+        image: yashdoc7/2048-game:latest
         ports:
         - containerPort: 8501
